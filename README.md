@@ -1,10 +1,11 @@
 # Small Tools, Clear Reviews, Playable Stories
 
-Three self-directed project samples: a working product-data tool, an independent open-source code review, and a short game narrative with implementation notes.
+Four self-directed project samples: a working product-data tool, a local email review workflow, an independent open-source code review, and a short game narrative with implementation notes.
 
 | Sample | What it demonstrates |
 | --- | --- |
 | [Product CSV Cleaner](sku-tool-en.html) | Column mapping, duplicate detection, exception reporting, and downloadable CSV/JSON results. |
+| [Inbox Review](inbox-review.md) | Local email classification, editable drafts, an approval queue, duplicate protection, and persistent tickets. Download includes source and tests. |
 | [Next.js proxy review](code-review.md) | A specific transport defect, a small patch, and narrowly scoped regression evidence. |
 | [One More Chair](one-more-chair.md) | Three slice-of-life milestones, character dialogue, branching outcomes, and progression rules. |
 
@@ -26,6 +27,12 @@ On Windows, `py -m http.server 8000 --bind 127.0.0.1` also works when the Python
 The demo accepts up to 200 records and ten columns. It trims whitespace, normalizes common units, preserves conflicting SKU records, and flags missing or invalid selected fields. Processing stays in page memory; refreshing clears the working data. CSV exports mark formula-like values as text, while JSON retains the original source values. To preserve leading-zero SKUs in Excel, import the CSV and set the SKU column to Text.
 
 Source files: [interface](sku-tool-en.html), [styles](sku-tool-en.css), [English UI and exports](sku-tool-en.mjs), and [shared parser and cleaning rules](sku-core.mjs).
+
+## Try the email review workflow
+
+[Inbox Review](inbox-review.md) turns fictional inbox messages into editable ticket drafts using Python, SQLite and a local Ollama model. The checked example run produced five drafts from eight inputs, skipped two duplicates and quarantined one malformed record. One ticket was created after an operator edited and approved a draft. The package includes eight passing workflow tests and the separate live-model results.
+
+Open the [walkthrough and download](inbox-review.md) to run it locally.
 
 ## Read the code review
 
