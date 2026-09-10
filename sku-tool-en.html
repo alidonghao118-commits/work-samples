@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Product CSV Cleaner — Original Project Sample</title>
+  <meta name="description" content="Clean a product CSV in your browser. Merge exact duplicates, keep conflicting SKUs for review, and download the results. A local demo for up to 200 rows.">
+  <link rel="stylesheet" href="./sku-tool-en.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to tool</a>
+<main id="main">
+  <header><a class="brand" href="./README.md">Project samples <span>· Product tools</span></a><nav aria-label="Main"><a href="./README.md">Read the project notes</a></nav></header>
+  <h1>Get your product CSV into shape.</h1>
+  <p class="sub">Merge exact duplicates. Flag missing fields and conflicting SKUs. Your data stays in this browser.</p>
+  <div class="grid">
+    <section class="panel" aria-labelledby="input-title">
+      <h2 id="input-title">1. Paste your CSV</h2>
+      <label for="input">Header row first · Up to 200 records and 10 columns</label>
+      <textarea id="input" spellcheck="false" placeholder="SKU,Product name,Unit,Price,Stock" aria-describedby="input-help"></textarea>
+      <div class="buttons"><button id="demo">Try the sample</button><button id="read" class="primary">Read columns</button></div>
+      <small id="input-help">Save your spreadsheet as UTF-8 CSV, then paste its contents here. The sample contains 10 made-up product records.</small>
+    </section>
+    <section class="panel" aria-labelledby="mapping-title">
+      <h2 id="mapping-title">2. Match the columns</h2>
+      <p class="hint">Choose your SKU column. Select the other fields you want checked.</p>
+      <div class="mapping" id="mapping"></div>
+      <div class="buttons"><button class="primary" id="clean" disabled>Clean the data</button></div>
+      <details><summary>What gets cleaned?</summary><p>Leading and trailing spaces are removed. Common units are standardized: pcs / each → piece, kilograms → kg, grams → g and boxes → box.</p><p>Rows that match after cleanup are merged. Different records with the same SKU stay separate and are flagged for review.</p><p>Selected price fields are checked for a nonnegative number, and stock for a whole number of zero or more. Missing values appear in the review report.</p></details>
+    </section>
+  </div>
+  <div id="status" class="status" role="status" aria-live="polite">Try the sample to see one exact duplicate merged and five records flagged for review.</div>
+  <section class="panel" aria-labelledby="result-title">
+    <h2 id="result-title">3. Review and download</h2>
+    <div class="buttons"><button id="csv" disabled>Download cleaned CSV</button><button id="issues" disabled>Download review report</button><button id="json" disabled>Download full JSON record</button></div>
+    <p class="hint">In Excel, use Data → From Text/CSV and set the SKU column to Text to preserve leading zeros. CSV downloads mark formula-like values as text; the JSON download retains original source values.</p>
+    <div class="scroll" id="result" tabindex="0" role="region" aria-label="Cleaned product records">Your cleaned records will appear here.</div>
+  </section>
+  <footer>Local demo v1 · Data is processed in page memory. Refresh to clear it.</footer>
+</main>
+<script type="module">import { mountTool } from './sku-tool-en.mjs'; mountTool();</script>
+</body>
+</html>
