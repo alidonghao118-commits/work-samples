@@ -1,9 +1,10 @@
 # Small Tools, Clear Reviews, Playable Stories
 
-Four self-directed project samples: a working product-data tool, a local email review workflow, an independent open-source code review, and a short game narrative with implementation notes.
+Five self-directed project samples: a working product-data tool, a local email review workflow, an independent open-source code review, a short game narrative with implementation notes, and a compact 3D prop.
 
 | Sample | What it demonstrates |
 | --- | --- |
+| [Retro fuel pump](retro-prop.md) | 174 triangles, one 32 × 32 atlas, portable model exports and editable Blender source. |
 | [Product CSV Cleaner](sku-tool-en.html) | Column mapping, duplicate detection, exception reporting, and downloadable CSV/JSON results. |
 | [Inbox Review](inbox-review.md) | Local email classification, editable drafts, an approval queue, duplicate protection, and persistent tickets. Download includes source and tests. |
 | [Next.js proxy review](code-review.md) | A specific transport defect, a small patch, and narrowly scoped regression evidence. |
