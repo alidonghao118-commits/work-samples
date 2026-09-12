@@ -1,0 +1,13 @@
+{
+  "bad_nonce": 403,
+  "bad_email": 400,
+  "too_short": 400,
+  "unknown_service": 400,
+  "honeypot": 400,
+  "saved_private_inquiries": 1,
+  "invalid_requests_created_records": false,
+  "private_inquiry_visible_publicly": false,
+  "product_filter": 2,
+  "game_filter": 1,
+  "detail_page": true
+}

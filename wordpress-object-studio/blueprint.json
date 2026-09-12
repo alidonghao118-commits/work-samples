@@ -1,0 +1,28 @@
+{
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "7.1"
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/alidonghao118-commits/work-samples/main/wordpress-object-studio/object-studio-theme.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\nupdate_option('blogname','Donghao / Objects');\nupdate_option('blogdescription','Product renders and game props');\nupdate_option('blog_public',0);\nswitch_theme('theme');\n// New theme init hooks become available on the next PHP request.\n"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\n$items=[\n ['Field radio','radio.png','product','Product visualization','Wood, brass and an olive-green grille.','An independent Blender material study. The wooden enclosure, brass trim and recessed face explore how different surfaces read together under soft studio lighting. This is original portfolio work, not a commissioned client project.'],\n ['Minimal display shelf','shelf.png','product','Furniture study','A light frame, warm shelves and room to breathe.','An original furniture asset with wood shelves, a metal frame and lower cabinets. The model was prepared with multiple views and reusable source files. This independent study focuses on clear silhouettes and simple material contrasts.'],\n ['Retro fuel pump','pump.jpg','game-prop','Game prop','A compact prop for a stylized roadside scene.','An original low-poly game prop with a compact color atlas. The simple geometry and bold silhouette make it suitable for a small stylized environment. This is an independent asset study.']\n];\nforeach($items as $n=>$v){\n $slug=sanitize_title($v[0]);\n if(get_page_by_path($slug,OBJECT,'studio_project')) continue;\n $id=wp_insert_post(['post_type'=>'studio_project','post_status'=>'publish','post_title'=>$v[0],'post_name'=>$slug,'post_excerpt'=>$v[4],'post_content'=>'<p>'.$v[5].'</p>','menu_order'=>$n]);\n if(!term_exists($v[2],'project_kind')) wp_insert_term($v[2]==='product'?'Product':'Game props','project_kind',['slug'=>$v[2]]);\n wp_set_object_terms($id,$v[2],'project_kind');\n update_post_meta($id,'studio_image',$v[1]);update_post_meta($id,'studio_label',$v[3]);\n}\n"
+    }
+  ]
+}
