@@ -11,6 +11,7 @@ Original project samples in automation, web development, 3D modeling, writing an
 | [FIELD / 01 radio](field-radio.md) | Editable component modeling, procedural materials, studio lighting and close-up product views. |
 | [Retro fuel pump](retro-prop.md) | 174 triangles, one 32 × 32 atlas, portable model exports and editable Blender source. |
 | [Product CSV Cleaner](sku-tool-en.html) | Column mapping, duplicate detection, exception reporting, and downloadable CSV/JSON results. |
+| [CSV cleanup delivery sample](csv-cleanup-sample.md) | Download the original data, cleaned records, review report and one-page result. |
 | [Quote review example](quote-evidence-demo.md) | Runnable Python example for checking a quote against its source message, with nine regression cases. |
 | [Chinese pair practice](chinese-pair-practice.md) | Free three-page A4 download: two information-gap worksheets and a teacher answer key. |
 | [Inbox Review](inbox-review.md) | Local email classification, editable drafts, an approval queue, duplicate protection, and persistent tickets. Download includes source and tests. |
@@ -38,7 +39,7 @@ On Windows, `py -m http.server 8000 --bind 127.0.0.1` also works when the Python
 4. Download the cleaned CSV, review report, or full JSON record.
 
 
-The demo accepts up to 200 records and ten columns. It trims whitespace, normalizes common units, preserves conflicting SKU records, and flags missing or invalid selected fields. Processing stays in page memory; refreshing clears the working data. CSV exports mark formula-like values as text, while JSON retains the original source values. To preserve leading-zero SKUs in Excel, import the CSV and set the SKU column to Text.
+The demo accepts up to 200 records and ten columns. It trims whitespace, normalizes common units, preserves conflicting SKU records, and flags missing or invalid selected fields. Processing stays in page memory; refreshing clears the working data. CSV exports mark formula-like values as text, while JSON retains unescaped processed values. To preserve leading-zero SKUs in Excel, import the CSV and set the SKU column to Text.
 
 
 Source files: [interface](sku-tool-en.html), [styles](sku-tool-en.css), [English UI and exports](sku-tool-en.mjs), and [shared parser and cleaning rules](sku-core.mjs).
