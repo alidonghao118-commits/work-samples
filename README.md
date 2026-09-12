@@ -1,9 +1,10 @@
 # Small Tools, Clear Reviews, Playable Stories
 
-Seven self-directed project samples: a rigid-body animation study, detailed product visualization, a compact 3D prop, a working product-data tool, a local email review workflow, an independent open-source code review, and a short game narrative with implementation notes.
+Eight self-directed project samples: an interactive WordPress portfolio, a rigid-body animation study, detailed product visualization, a compact 3D prop, a working product-data tool, a local email review workflow, an independent open-source code review, and a short game narrative with implementation notes.
 
 | Sample | What it demonstrates |
 | --- | --- |
+| [WordPress Object Studio](wordpress-object-studio/) | Original responsive theme, project categories, individual pages and a working inquiry form with a private admin inbox. Open in WordPress Playground. |
 | [Chain Reaction animation](domino-motion.md) | Blender rigid-body simulation, baked animation and portrait/landscape video exports. |
 | [FIELD / 01 radio](field-radio.md) | Editable component modeling, procedural materials, studio lighting and close-up product views. |
 | [Retro fuel pump](retro-prop.md) | 174 triangles, one 32 × 32 atlas, portable model exports and editable Blender source. |
