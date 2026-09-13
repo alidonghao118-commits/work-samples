@@ -6,6 +6,7 @@ Original project samples in automation, web development, 3D modeling, writing an
 
 | Sample | What it demonstrates |
 | --- | --- |
+| [Minecraft Starter Kit](starterkit-demo.md) | Downloadable Paper 1.21.11 plugin with cooldowns, permissions, persisted claims and 13 automated tests. |
 | [WordPress Object Studio](wordpress-object-studio/) | Original responsive theme, project categories, individual pages and a working inquiry form with a private admin inbox. Open in WordPress Playground. |
 | [Chain Reaction animation](domino-motion.md) | Blender rigid-body simulation, baked animation and portrait/landscape video exports. |
 | [FIELD / 01 radio](field-radio.md) | Editable component modeling, procedural materials, studio lighting and close-up product views. |

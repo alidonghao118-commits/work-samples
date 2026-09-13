@@ -1,0 +1,18 @@
+Verified 2026-09-13; Java 21, Paper API 1.21.11, MockBukkit 4.116.3.
+Mock-server tests, not a live Minecraft client session.
+
+PASS ClaimLedgerTest.damagedHistoryIsNotSilentlyReset
+PASS ClaimLedgerTest.survivesNewLedgerAndExpiresExactlyAtBoundary
+PASS ClaimLedgerTest.multiplePlayersAndLaterClaimArePreserved
+PASS ClaimLedgerTest.clockGoingBackwardsDoesNotUnlockKit
+PASS ClaimLedgerTest.failedWriteDoesNotConsumeClaim
+PASS ClaimLedgerTest.firstClaimIsImmediatelyEligible
+PASS StarterKitPluginTest.unknownArgumentsGiveUsageWithoutItems
+PASS StarterKitPluginTest.registeredCommandGivesExactKit
+PASS StarterKitPluginTest.diskWriteFailureDoesNotGiveItems
+PASS StarterKitPluginTest.insufficientRoomGivesNothingAndDoesNotConsumeClaim
+PASS StarterKitPluginTest.repeatedCommandDoesNotDuplicateItems
+PASS StarterKitPluginTest.permissionDeniedDoesNotConsumeClaim
+PASS StarterKitPluginTest.consoleCommandDoesNotThrow
+
+13 passed, 0 failed, 0 skipped.
